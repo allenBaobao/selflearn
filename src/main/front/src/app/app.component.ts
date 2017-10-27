@@ -11,6 +11,8 @@ export class AppComponent {
 
   private chartData: Array<any>;
 
+  private tutoChartData: Array<number>;
+
   constructor() {}
 
   ngOnInit() {
@@ -20,7 +22,7 @@ export class AppComponent {
 
       // change the data periodically
       setInterval(() => this.generateData(), 3000);
-    }, 1000);
+    }, 800);
   }
 
   generateData() {
@@ -31,5 +33,8 @@ export class AppComponent {
         Math.floor(Math.random() * 100)
       ]);
     }
+
+    this.tutoChartData = [30,86,156,122,454,65];
+
   }
 }
